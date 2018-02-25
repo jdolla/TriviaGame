@@ -1,0 +1,36 @@
+body {
+    /* 
+        background source:
+        https://www.pinterest.com/pin/415386765610566720/
+    */
+    background-image: url("../images/background003.jpg");
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: auto;
+
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#header {
+    margin: 10px 0;
+    padding: 10px 0;
+
+    font-family: 'Arbutus', cursive;
+    font-size: 36px;
+    font-weight: bold;
+
+    background: lightgray;
+    border: 3px solid black;
+
+    color: black;
+    text-shadow:
+    -1.5px -1.5px 0 darkgray,
+    1.5px -1.5px 0 darkgray,
+    -1.5px 1.5px 0 darkgray,
+    1.5px 1.5px 0 darkgray;
+}
