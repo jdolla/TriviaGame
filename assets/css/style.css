@@ -1,3 +1,20 @@
+/* https://stackoverflow.com/questions/2237540/how-do-i-load-external-fonts-into-an-html-document */
+
+@font-face{
+    font-family: "GeoSteam";
+    src: url("../fonts/geosteam.ttf")
+}
+@font-face{
+    font-family: "RoughTypewriter";
+    src: url("../fonts/rough_typewriter.otf");
+}
+@font-face{
+    font-family: "RoughTypewriter";
+    src: url("../fonts/rough_typewriter-bld-itl.otf");
+    font-weight: bold;
+}
+
+
 body {
     /* 
         background source:
@@ -5,6 +22,10 @@ body {
     */
     background-image: url("../images/background003.jpg");
     font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+    display: none;
 }
 
 .grid-container-1 {
@@ -16,21 +37,208 @@ body {
     margin: 0 auto;
 }
 
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.grid-container-3 {
+    display: grid;
+    grid-template-columns: 60px 25px;
+    grid-column-gap: 2px;
+    grid-row-gap: 5px;
+}
+
+.grid-container-4 {
+    display: grid;
+    grid-template-columns: auto;
+    width: 80%;
+}
+
+
 #header {
     margin: 10px 0;
     padding: 10px 0;
 
-    font-family: 'Arbutus', cursive;
+    /* font-family: 'Arbutus', cursive; */
+    font-family: GeoSteam, 'Arbutus', cursive;
     font-size: 36px;
-    font-weight: bold;
 
     background: lightgray;
     border: 3px solid black;
 
     color: black;
-    text-shadow:
-    -1.5px -1.5px 0 darkgray,
-    1.5px -1.5px 0 darkgray,
-    -1.5px 1.5px 0 darkgray,
-    1.5px 1.5px 0 darkgray;
+
+}
+
+#clock {
+    position: relative;
+}
+
+#clock-image {
+    width: 100%;
+    
+}
+
+.clock-btn {
+    width: 200px;
+    margin: 100px auto 0 auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.clock-timer {
+    width: 400px;
+    margin: 25px auto 0 auto;
+}
+
+#start-btn {
+    font-size: 28px;
+    font-family: RoughTypewriter, 'Arbutus', cursive;
+    font-weight: bold;
+
+    background: darkslategray;
+    color: darkgray;
+    border: 1px solid darkgray;
+
+    padding: 10px 0;
+    width: 100%;
+
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+#start-btn:hover {
+    background: darkgray;
+    color: darkslategray;
+    border: 1px solid darkslategray;  
+}
+
+#timer{
+    font-family: RoughTypewriter, 'Arbutus', cursive;
+
+    position: absolute;
+    top: 200px;
+    left: 62px;
+
+    font-size: 32px;
+    color: black;
+    letter-spacing: -2px;
+    text-align: center;
+}
+
+#time-label {
+    font-size: 24px;
+}
+
+#time {
+    letter-spacing: -5px;
+}
+
+#flame1 {
+    width: 30px;
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
+
+#flame2 {
+    width: 30px;
+    position: absolute;
+    top: 240px;
+    left: 175px;
+}
+
+#flame3 {
+    width: 30px;
+    position: absolute;
+    top: 248px;
+    left: 195px;
+}
+
+#flame4 {
+    width: 30px;
+    position: absolute;
+    top: 250px;
+    left: 218px;
+}
+
+#flame5 {
+    width: 30px;
+    position: absolute;
+    top: 250px;
+    left: 240px;
+}
+
+#rounds {
+    font-family: GeoSteam;
+    font-size: 24px;
+
+    color: gold;
+    opacity: .4;
+
+    position: absolute;
+    top: 210px;
+    right: 84px;
+}
+
+#stats {
+    font-family: RoughTypewriter, 'Arbutus', cursive;
+
+    text-align: left;
+    position: absolute;
+    top: 270px;
+    left: 45px;
+
+}
+
+
+
+.ticker {
+    text-align: right;
+}
+
+
+.choice-btn {
+    font-size: 28px;
+    font-weight: bold;
+
+    background: #EBDBBF;
+    color: #8D754D;
+    border: 1px solid #6D6D6C;
+
+    padding: 10px 0;
+    margin: 5px 0;
+    width: 100%;
+
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.choice-btn:hover {
+    background: #6D6D6C;
+    border: 1px solid darkslategray;  
+}
+
+#game-box {
+    align-content: center;
+    margin: 45px auto 0 auto;
+
+    font-family: RoughTypewriter, 'Arbutus', cursive;
+}
+#choice-box {
+    margin-top: 25px;
+}
+#question {
+    font-size: 24px;
+    padding: 10px;
+    font-weight: bold;
+
+}
+#question-card {
+    background-color: #6c501c;
+    padding: 25px;
+    border-radius: 15px;
 }

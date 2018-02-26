@@ -14,45 +14,70 @@
     <div id="container" class="grid-container-1">
 
         <div id="header">
-            <h1 class="header">Trivia Game</h1>
+            <h1 class="header">STEAM PUNK TRIVIA</h1>
         </div>
 
-        <div id="start">
-            <button id="start-btn">start</button>
-        </div>
-<!-- 
+        <div id="container-2" class="grid-container-2">
 
-        <div id="game-box">
-            <div id="time-box">
-                Time Remaining!
-            </div>
-            <div id="question-box">
-                Who is???
-                <div id="choice-box">
-                    <button id="choice1" class="choice-button">Choice1</button>
-                    <button id="choice2" class="choice-button">Choice2</button>
-                    <button id="choice3" class="choice-button">Choice3</button>
-                    <button id="choice4" class="choice-button">Choice4</button>
+            <div id="clock" class="clock-btn">
+                <img id="clock-image" src="./assets/images/widget-vault.png" alt="score">
+                <button id="start-btn">Start</button>
+                <div id="timer" class="hidden">
+                    <div id="time-label">Time</div>
+                    <div id="time">00</div>
                 </div>
-            </div>
-            <div id="reveal-box">
-                <div id="outcome-box">
-                    Correct / Incorrect
-                    <div id="answer-box">
-                        Correct Answer Was...
+                <div id="stats" class="ticking hidden">
+                    <div class="grid-container-3">
+                        <div>RIGHT:</div><div id="won ticker">0</div>
+                        <div>WRONG:</div><div id="lost ticker">0</div>
                     </div>
-                    <img src="http://via.placeholder.com/350x150" alt="placeholder">
                 </div>
+                <img id="flame1" class="ticking hidden" src="./assets/images/flame.gif">
+                <img id="flame2" class="ticking hidden" src="./assets/images/flame.gif">
+                <img id="flame3" class="ticking hidden" src="./assets/images/flame.gif">
+                <img id="flame4" class="ticking hidden" src="./assets/images/flame.gif">
+                <img id="flame5" class="ticking hidden" src="./assets/images/flame.gif">
+                <div id="rounds" class="ticking hidden">9</div>
             </div>
 
-        </div> -->
 
+
+
+            <div id="game-box" class="hidden">
+                <div id="question-card" class="grid-container-4">
+                    <div id="question-box">
+                        <div id="question">
+                            This is the first question that you have to answer in order to win and you must answer.
+                        </div>
+                        <div id="choice-box">
+                            <button id="choice1" class="choice-btn">Choice1</button>
+                            <button id="choice2" class="choice-btn">Choice2</button>
+                            <button id="choice3" class="choice-btn">Choice3</button>
+                            <button id="choice4" class="choice-btn">Choice4</button>
+                        </div>
+                    </div>
+                    <div id="reveal-box" class="hidden">
+                        <div id="outcome-box">
+                            Correct / Incorrect
+                            <div id="answer-box">
+                                Correct Answer Was...
+                            </div>
+                            <img src="http://via.placeholder.com/350x150" alt="placeholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
     <!-- SCRIPTS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+
     <script src="./assets/javascript/app.js"></script>
 </body>
 
