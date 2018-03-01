@@ -22,6 +22,7 @@ body {
     */
     background-image: url("../images/background003.jpg");
     font-family: 'Roboto', sans-serif;
+    min-width: 1100px;
 }
 
 .hidden {
@@ -44,7 +45,7 @@ body {
 
 .grid-container-3 {
     display: grid;
-    grid-template-columns: 60px 25px;
+    grid-template-columns: 60px 10px;
     grid-column-gap: 2px;
     grid-row-gap: 5px;
 }
@@ -97,9 +98,9 @@ body {
     font-family: RoughTypewriter, 'Arbutus', cursive;
     font-weight: bold;
 
-    background: darkslategray;
-    color: darkgray;
-    border: 1px solid darkgray;
+    background: #8D754D;
+    color: #EBDBBF;
+    border: 1px solid #EBDBBF;
 
     padding: 10px 0;
     width: 100%;
@@ -110,9 +111,9 @@ body {
 }
 
 #start-btn:hover {
-    background: darkgray;
-    color: darkslategray;
-    border: 1px solid darkslategray;  
+    background: #6D6D6C;
+    border: 1px solid #EBDBBF;
+    color: #EBDBBF;
 }
 
 #timer{
@@ -175,8 +176,8 @@ body {
     font-family: GeoSteam;
     font-size: 24px;
 
-    color: gold;
-    opacity: .4;
+    color: #E96912;
+    opacity: .5;
 
     position: absolute;
     top: 210px;
@@ -200,9 +201,11 @@ body {
 }
 
 
+
 .choice-btn {
     font-size: 28px;
     font-weight: bold;
+    font-family: RoughTypewriter, 'Arbutus', cursive;
 
     background: #EBDBBF;
     color: #8D754D;
@@ -211,6 +214,7 @@ body {
     padding: 10px 0;
     margin: 5px 0;
     width: 100%;
+    min-height: 50px;
 
     text-align: center;
     text-decoration: none;
@@ -219,7 +223,8 @@ body {
 
 .choice-btn:hover {
     background: #6D6D6C;
-    border: 1px solid darkslategray;  
+    border: 1px solid #EBDBBF;
+    color: #EBDBBF;
 }
 
 #game-box {
@@ -235,10 +240,23 @@ body {
     font-size: 24px;
     padding: 10px;
     font-weight: bold;
-
 }
 #question-card {
     background-color: #6c501c;
     padding: 25px;
     border-radius: 15px;
+    min-width: 772.75px;
+    min-height: 340px;
+}
+
+#answer-box {
+    font-size: 24px;
+    padding: 10px;
+    font-weight: bold;
+    min-height: 75px;
+}
+
+#reveal-image {
+    width: 500px;
+    height: 200px;
 }

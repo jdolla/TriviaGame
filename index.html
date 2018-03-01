@@ -28,8 +28,10 @@
                 </div>
                 <div id="stats" class="ticking hidden">
                     <div class="grid-container-3">
-                        <div>RIGHT:</div><div id="won ticker">0</div>
-                        <div>WRONG:</div><div id="lost ticker">0</div>
+                        <div>RIGHT:</div>
+                        <div id="won" class="ticker">0</div>
+                        <div>WRONG:</div>
+                        <div id="lost" class="ticker">0</div>
                     </div>
                 </div>
                 <img id="flame1" class="ticking hidden" src="./assets/images/flame.gif">
@@ -40,29 +42,19 @@
                 <div id="rounds" class="ticking hidden">9</div>
             </div>
 
-
-
-
             <div id="game-box" class="hidden">
                 <div id="question-card" class="grid-container-4">
                     <div id="question-box">
                         <div id="question">
-                            This is the first question that you have to answer in order to win and you must answer.
                         </div>
                         <div id="choice-box">
-                            <button id="choice1" class="choice-btn">Choice1</button>
-                            <button id="choice2" class="choice-btn">Choice2</button>
-                            <button id="choice3" class="choice-btn">Choice3</button>
-                            <button id="choice4" class="choice-btn">Choice4</button>
                         </div>
                     </div>
                     <div id="reveal-box" class="hidden">
                         <div id="outcome-box">
-                            Correct / Incorrect
                             <div id="answer-box">
-                                Correct Answer Was...
                             </div>
-                            <img src="http://via.placeholder.com/350x150" alt="placeholder">
+                            <img id="reveal-image" src="http://via.placeholder.com/500x300" alt="placeholder">
                         </div>
                     </div>
                 </div>
