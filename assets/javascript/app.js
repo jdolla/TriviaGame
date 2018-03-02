@@ -54,24 +54,34 @@ var clock = {
 
 var questionSource = [
     {
-        question: "what is your favorite color?",
+        question: "What science fiction author coined the term 'Steam Punk'?",
         choices: [
-            { choice: "Red", correct: false },
-            { choice: "Blue", correct: true },
-            { choice: "Orange", correct: false },
-            { choice: "Green", correct: false }
+            { choice: "K. W. Jeter", correct: true },
+            { choice: "Phillip K. Dick", correct: false },
+            { choice: "George R. R. Martin", correct: false },
+            { choice: "Dr. Seuss", correct: false }
         ],
-        image: "http://via.placeholder.com/350x150"
+        image: "./assets/images/morlocks.jpg"
     },
     {
-        question: "what is your quest?",
+        question: "Steam Punk typically occurs in an alternate timeline in which steam powers technology instead of ___ ?",
         choices: [
-            { choice: "To seek the holy grail!", correct: false },
-            { choice: "to make a bunch of money", correct: true },
-            { choice: "To see gnomes at night", correct: false },
-            { choice: "to walk on the sun", correct: false }
+            { choice: "Electricity", correct: true },
+            { choice: "Internal Combustion", correct: false },
+            { choice: "Solar Power", correct: false },
+            { choice: "Gnomes", correct: false }
         ],
-        image: "http://via.placeholder.com/350x150"
+        image: "./assets/images/SteamPoweredSpaceShip.jpg"
+    },
+    {
+        question: "This first-person shooter by 2k boston took many influences from steam punk.",
+        choices: [
+            { choice: "BioShock", correct: true },
+            { choice: "Destiny", correct: false },
+            { choice: "Half Life", correct: false },
+            { choice: "Counter Strike", correct: false }
+        ],
+        image: "./assets/images/bioshock.jpg"
     }
 ]
 
@@ -101,6 +111,9 @@ var question = (function(src){
                 $(button).text(choice.choice);
                 return button;
             }
+        },
+        getImage: function(){
+            return private.image;
         }
     }
 })
@@ -171,6 +184,8 @@ var game = {
                 c = q.getChoice();
             }
             clock.setRounds(game.questionBank.length);
+            $("#reveal-image").attr("src", q.getImage());
+
             $(game.questionBox).show();
             game.intervalTimer = setInterval(game.tick, 1000);
 
